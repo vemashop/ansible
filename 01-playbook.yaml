@@ -1,5 +1,5 @@
 - name: playbook
-  host: web
+  hosts: web
   task:
    - name: Print "Hello World"
      module:

@@ -1,0 +1,7 @@
+- name: Nginx
+  hosts: web
+  tasks:
+  - name: Install nginx
+    yum:
+     name: nginx
+     state: installed

@@ -1,4 +1,4 @@
-- name: HelloWorld
+- name: playbook
   host: web
   task:
    - name: Print "Hello World"

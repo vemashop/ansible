@@ -1,4 +1,4 @@
-- name: Hello World
+- name: HelloWorld
   host: web
   task:
    - name: Print "Hello World"

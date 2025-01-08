@@ -5,3 +5,7 @@
     yum:
      name: nginx
      state: installed
+  - name: Start nginx
+    service:
+     name: nginx
+     state: started   

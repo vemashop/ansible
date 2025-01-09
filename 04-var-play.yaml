@@ -8,7 +8,7 @@
   tasks: 
   - name: printing variable1
     ansible.buildin.debug:
-     msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}" and Trainer is {{ TRAINER }}"
+     msg: "Course is {{ COURSE }}, Duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
 
   tasks: 
   - name: printing variable2
@@ -17,5 +17,5 @@
      DURATION: 12HRS 
      TRAINER: Sai
     ansible.buildin.debug:
-     msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}" and Trainer is {{ TRAINER }}"   
+     msg: "Course is {{ COURSE }}, Duration is {{ DURATION }} and Trainer is {{ TRAINER }}"   
 

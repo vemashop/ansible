@@ -1,0 +1,17 @@
+- name: variables from prompt
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: COURSE
+    prompt: "Please enter course name"
+    private: false
+  - name: DURATION
+    prompt: "Please enter duration"
+    private: false
+  - name: TRAINER
+    prompt: "Please enter trainer name"  
+    private: false
+  tasks: 
+  - name:
+    ansible.biltin.debug:
+     msg: "Course is {{ COURSE}}, Duration is {{DURATION}} and {{TRAINER}}"  

@@ -1,6 +1,6 @@
 - name: PLAY1
   hosts: local
   connection: local
-  tasks: hello
+  tasks: 
    ansible.builtin.debug:
     mesaage: "Hello World"

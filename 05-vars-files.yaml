@@ -1,7 +1,7 @@
 - name: Playbook using file variables
   hosts: local
   connection: local
-  vars_file: 
+  var_files: 
    source-vars.yaml
   tasks:
    - name: source variables

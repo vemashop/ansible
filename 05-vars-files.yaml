@@ -1,0 +1,10 @@
+- name: Playbook using file variables
+  hosts: local
+  connection: local
+  vars_file: 
+   source-vars.yaml
+  tasks:
+   - name: source variables
+      ansible.builtin.debug:
+       msg: " Course is {{COURSE}}, Duration is {{DURATION}} and Trainer is {{TRAINER}}"
+    

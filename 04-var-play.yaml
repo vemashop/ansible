@@ -7,7 +7,7 @@
    TRAINER: Siva
   tasks: 
   - name: printing variable1
-    ansible.buildin.debug:
+    ansible.builtin.debug:
      msg: "Course is {{ COURSE }}, Duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
 
   tasks: 
@@ -16,6 +16,6 @@
      COURSE: "Ansible"
      DURATION: 12HRS 
      TRAINER: Sai
-    ansible.buildin.debug:
+    ansible.builtin.debug:
      msg: "Course is {{ COURSE }}, Duration is {{ DURATION }} and Trainer is {{ TRAINER }}"   
 

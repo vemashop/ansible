@@ -1,7 +1,7 @@
 - name: play1
   hosts: local
   connection: local
-  vars:
+  vars: # play variables or global vars
    COURSE: "DevOps with AWS"
    DURATION: 120HRS 
    TRAINER: Siva
@@ -12,7 +12,7 @@
 
 
   - name: printing variable2
-    vars: 
+    vars: # task vars
      COURSE: "Ansible"
      DURATION: 12HRS 
      TRAINER: Sai

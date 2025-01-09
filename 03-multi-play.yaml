@@ -1,6 +1,6 @@
 - name: PLAY1
   hosts: locol
   connection: locol
-  tasks: printing
+  tasks: hello
    ansible.builtin.debug:
     mesaage: "Hello World"

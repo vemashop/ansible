@@ -6,6 +6,7 @@
   vars_prompt:
    name: prompting
    prompt: Enter course name
+   private: false 
   vars_files:
    source-vars.yaml   
   tasks:

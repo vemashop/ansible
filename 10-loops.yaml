@@ -7,4 +7,4 @@
   - name: checking number
     ansible.builtin.debug:
      msg: "15 is greater than {{ my_number }}"
-    when: 15 > {{ my_number }} 
+    when: 15 > my_number

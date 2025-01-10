@@ -4,7 +4,7 @@
   # vars:
   #  COURSE: "DevOps Play"
   vars_prompt:
-  - name: prompting
+  - name: COURSE
     prompt: Enter course name
     private: false 
   # vars_files:

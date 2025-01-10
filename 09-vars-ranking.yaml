@@ -7,8 +7,8 @@
    name: prompting
    prompt: Enter course name
    private: false 
-  vars_files:
-   source-vars.yaml   
+  # vars_files:
+  #  source-vars.yaml   
   tasks:
   - name: tasking
     # vars:
@@ -16,4 +16,4 @@
     ansible.builtin.debug:
      msg: Course {{ COURSE }}
 
-    # 1-args 2-task
+    # 1-args 2-task 3-source

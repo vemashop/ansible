@@ -10,7 +10,8 @@
    source-vars.yaml   
   tasks:
   - name: tasking
-    COURSE: "DevOps Task" 
+    vars:
+     COURSE: "DevOps Task" 
     ansible.builtin.debug:
      msg: Course {{ COURSE }}
 

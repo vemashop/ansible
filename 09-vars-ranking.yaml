@@ -4,7 +4,7 @@
   # vars:
   #  COURSE: "DevOps Play"
   vars_prompt:
-  - name: COURSE
+    name: COURSE
     prompt: Enter course name
     private: false 
   # vars_files:
@@ -16,4 +16,4 @@
     ansible.builtin.debug:
      msg: Course {{ COURSE }}
 
-    # 1-args 2-task 3-source 4-play 5-inventory
+    # 1-args 2-task 3-source 4-play 5-inventory 

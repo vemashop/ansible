@@ -1,0 +1,18 @@
+- name: ranking variables
+  hosts: local
+  connection: local
+  vars:
+   COURSE: "DevOps Play"
+  vars_prompt:
+   Prompt: Enter course name
+  vars_files:
+   source-vars.yaml   
+  tasks:
+  - name: tasking 1
+    COURSE: "DevOps Task" 
+    ansible.builtin.debug:
+     msg: Course {{ COURSE }}
+
+  - name: tasking 2
+    ansible.builtin.debug:
+     msg: Course {{ COURSE }}   

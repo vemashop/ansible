@@ -15,6 +15,4 @@
     ansible.builtin.debug:
      msg: Course {{ COURSE }}
 
-  - name: tasking 2
-    ansible.builtin.debug:
-     msg: Course {{ COURSE }}   
+    

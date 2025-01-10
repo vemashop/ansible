@@ -16,4 +16,4 @@
     ansible.builtin.debug:
      msg: Course {{ COURSE }}
 
-    # 1-args 2-task 3-source 4-play
+    # 1-args 2-task 3-source 4-play 5-inventory

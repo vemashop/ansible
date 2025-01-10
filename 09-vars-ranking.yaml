@@ -4,6 +4,7 @@
   vars:
    COURSE: "DevOps Play"
   vars_prompt:
+   name: prompting
    Prompt: Enter course name
   vars_files:
    source-vars.yaml   

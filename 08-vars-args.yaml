@@ -1,0 +1,11 @@
+- name: variables from args
+  hosts: local
+  connection: local
+  tasks:
+  - name: argus
+    ansible.builtin.debug:
+     msg: "Course is {{ COURSE}}"
+     msg: "Duration is {{ DURATION}}"
+     msg: "Trainer is {{ TRAINER}}"
+
+     

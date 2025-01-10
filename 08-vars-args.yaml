@@ -4,8 +4,7 @@
   tasks:
   - name: argus
     ansible.builtin.debug:
-     msg1: "Course is {{ COURSE}}"
-     msg2: "Duration is {{ DURATION}}"
-     msg3: "Trainer is {{ TRAINER}}"
+     msg: "Course is {{ COURSE}}, Duration is {{ DURATION}} and Trainer is {{ TRAINER}}"
+     
 
      

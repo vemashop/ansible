@@ -13,7 +13,7 @@
 
   - name: creating APP dir
     ansible.builtin.file:
-     name: app
+     name: /app
      state: directory
 
   - name: Downloading Code

@@ -4,11 +4,8 @@
   tasks:
   - name: Installing NodeJs and Mysql Client
     ansible.builtin.dnf:
-     name: {{ item }}
+     name: nodejs=20
      state: present
-     loop:
-      - nodejs=20
-      - mysql
 
   - name: Creating EXPENSE user
     ansible.builtin.user:
@@ -38,6 +35,11 @@
      enabled: yes
      state: started
      name: backend
+
+  - name: Installing Mysql Client
+    ansible.builtin.dnf:
+     name: mysql
+     state: present   
 
   - name:  Loading Schema via importing
     community.mysql.mysql_db:

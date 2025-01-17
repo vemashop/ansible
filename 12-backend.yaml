@@ -23,9 +23,9 @@
 
   - name: Unarchiving the code
     ansible.builtin.unarchive: 
-    src: /tmp/backend.zip
-    dest: /app 
-    remote_src: yes 
+     src: /tmp/backend.zip
+     dest: /app 
+     remote_src: yes 
 
   - name: Install dependencies
     community.general.npm:

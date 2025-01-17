@@ -10,4 +10,11 @@
     ansible.builtin.service:
      name: mysqld
      state: started
-     enabled: yes
+     enabled: yes 
+  - name: Setting-up Root password
+    mysql_user:
+     login_host: localhost
+     login_user: root
+     login_password: ExpenseApp@1
+     state: present
+

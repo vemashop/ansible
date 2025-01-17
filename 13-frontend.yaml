@@ -34,9 +34,9 @@
 
   - name: copying the expense.conf file
     ansible.builtin.copy:
-     src: /home/ec2-user/expense.conf
+     src: /home/ec2-user/ansible/expense.conf
      dest: /etc/nginx/default.d/expense.conf
-     remote_src: yes
+     
 
   - name: Restarting the nginx
     ansible.builtin.service:

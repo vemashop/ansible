@@ -6,6 +6,7 @@
     ansible.builtin.package:
      name: mysql-server
      state: present
+
   - name: Enable and Start Mysql-Server
     ansible.builtin.service:
      name: mysqld
@@ -22,7 +23,7 @@
   - name: connect to mysql server
     community.mysql.mysql_info:
      login_user: root
-     login_password: ExpenseApp@1
+     login_password: "ExpenseApp@1"
      login_host: localhost
     
 

@@ -3,15 +3,15 @@
   become: yes
   tasks: 
   - name: Installing nginx 
-   ansible.builtin.package: 
-    state: present
-    name: nginx
+    ansible.builtin.package: 
+     state: present
+     name: nginx
 
   - name: Enable and Start Nginx
-   ansible.builtin.service:
-    name: nginx
-    enabled: yes
-    state: started 
+    ansible.builtin.service:
+     name: nginx
+     enabled: yes
+     state: started 
 
   - name: Removing the default Nginx html content
     ansible.builtin.file:

@@ -1,0 +1,50 @@
+- name: Backend Config
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: Installing NodeJs and Mysql Client
+    ansible.builtin.dnf:
+     name: {{ item }}
+     state: present
+     loop:
+      - nodejs=20
+      - mysql
+
+  - name: Creating EXPENSE user
+    ansible.builtin.user:
+     name: expense
+
+  - name: creating APP dir
+    ansible.builtin.file:
+     name: app
+     state: directory
+
+  - name: Downloading Code
+    ansible.builtin.get_url:
+     url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
+     dest: /tmp/backend.zip 
+
+  - name: Installing dependencies
+    ansible.builtin.command: "npm install" 
+    when: stat_result.stat.exists == false 
+
+  - name:  copying backend.service file
+    ansible.builtin.copy: 
+     src: /home/ec2-user/ansible/backend.service
+     dest: /etc/systemd/system/backend.service 
+
+  - name: Enableing and Starting backend
+    ansible.builtin.service: 
+     enabled: yes
+     state: started
+     name: backend
+
+  - name:  Loading Schema via importing
+    community.mysql.mysql_db:
+     state: import     
+     name: all
+     target: /app/schema/backend.sql
+  - name: Restating backend
+    ansible.builtin.service: 
+     state: restarted
+     name: backend

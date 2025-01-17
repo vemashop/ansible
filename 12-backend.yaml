@@ -42,6 +42,13 @@
      state: started
      name: backend
 
+  - name: Install MySQL libraries
+    ansible.builtin.pip:
+      name: "{{ item }}"
+      executable: pip3.9
+    loop:
+    - PyMySQL   
+
   - name: Installing Mysql Client
     ansible.builtin.dnf:
      name: mysql

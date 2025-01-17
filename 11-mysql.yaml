@@ -12,6 +12,13 @@
      state: started
      enabled: yes 
 
+  - name: Install MySQL libraries
+    ansible.builtin.pip:
+      name: "{{ item }}"
+      executable: pip3.9
+    loop:
+    - PyMySQL
+
   - name: connect to mysql server
     community.mysql.mysql_info:
      login_user: root

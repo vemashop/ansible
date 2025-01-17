@@ -1,5 +1,5 @@
 - name: Mysql configuration
-  hosts: 172.31.26.243
+  hosts: "172.31.26.243"
   become: yes
   tasks:
   - name: Installing Mysql-Server

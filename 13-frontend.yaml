@@ -36,6 +36,7 @@
     ansible.builtin.copy:
      src: /home/ec2-user/expense.conf
      dest: /etc/nginx/default.d/expense.conf
+     remote_src: yes
 
   - name: Restarting the nginx
     ansible.builtin.service:

@@ -54,11 +54,15 @@
      name: mysql
      state: present   
 
-  - name:  Loading Schema via importing
+  - name: import mysql data
     community.mysql.mysql_db:
-     state: import     
-     name: all
-     target: /app/schema/backend.sql
+      state: import
+      name: all
+      login_user: root
+      login_password: ExpenseApp@1
+      login_host: "172.31.26.243"
+      target: /app/schema/backend.sql
+
   - name: Restating backend
     ansible.builtin.service: 
      state: restarted

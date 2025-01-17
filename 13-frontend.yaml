@@ -3,7 +3,7 @@
   become: yes
 
 - name: Installing nginx 
-  ansible.builtin.dnf: 
+  ansible.builtin.package: 
    state: present
    name: nginx
 

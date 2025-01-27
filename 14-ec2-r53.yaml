@@ -32,4 +32,4 @@
 
    - name: printing ec2 ips  
      ansible.builtin.debug:
-      msg: "{{PrivateIps | from_yaml }}"
+      msg: "{{item.instances[0].private_ip_address }}"

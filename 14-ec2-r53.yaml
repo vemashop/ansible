@@ -1,6 +1,7 @@
 ---
 - name: Creating ec2-instances and Route53 in aws
   hosts: localhost
+  connection: local
   vars:
    subnet_id: subnet-0c26f77e51e974f54
    sg_id: sg-0d150257dd3f58814

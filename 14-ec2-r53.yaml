@@ -32,4 +32,4 @@
 
    - name: printing ec2 ips  
      ansible.builtin.debug:
-      msg: "{{ ec2_info.instances[0].private_ip_address}}"
+      msg: "{{ ec2_info.results | map(attribute='instances') | map('first') | map(attribute='private_ip_address') | list }}"

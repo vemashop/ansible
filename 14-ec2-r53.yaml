@@ -32,4 +32,4 @@
 
    - name: printing ec2_info  
      ansible.builtin.debug:
-      msg: "{{ec2_info.skipped}}"
+      msg: "{{ec2_info.results[instance_ids]}}"

@@ -32,4 +32,4 @@
 
    - name: printing ec2 ips  
      ansible.builtin.debug:
-      msg: "{{privateIP}}"
+      msg: "{{privateIPs}}"
